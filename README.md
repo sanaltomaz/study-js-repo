@@ -14,7 +14,7 @@
 ## 💻 Como Usar
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/study-js-repo.git
+   git clone https://github.com/sanaltomaz/study-js-repo.git
 2. Acesse as pastas e explore os exemplos e anotações.
 
 ## 🤝 Contribuições
