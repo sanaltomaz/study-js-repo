@@ -1,0 +1,7 @@
+    NOTA
+Este arquivo será utilizado para listar os exercícios que serão adicionados ao repositório. 
+Ele servirá como um guia para organizar e acompanhar os tópicos que serão trabalhados, 
+permitindo uma visão clara do progresso do projeto.
+
+Os exercícios ainda estão sendo definidos e serão inseridos à medida que forem planejados.
+

@@ -1,0 +1,4 @@
+    Sobre a pasta minha-solucao-operadores
+Esta pasta contém as minhas próprias resoluções para os exercícios propostos. 
+As soluções aqui apresentadas refletem meu raciocínio e abordagem inicial para cada problema, 
+sem influência de ferramentas externas. É um espaço para praticar, errar e aprender! 😄
