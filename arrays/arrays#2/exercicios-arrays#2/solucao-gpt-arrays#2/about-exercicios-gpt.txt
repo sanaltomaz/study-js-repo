@@ -1,4 +1,4 @@
-    Sobre a pasta solucao-gpt-arrays
+    Sobre a pasta solucao-gpt
 Nesta pasta estão as soluções aprimoradas e comentadas com o auxílio do ChatGPT. 
 Cada exercício foi resolvido com explicações detalhadas, 
 boas práticas e possíveis otimizações, 

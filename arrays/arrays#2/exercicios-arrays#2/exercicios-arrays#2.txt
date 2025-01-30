@@ -3,6 +3,10 @@ Dominar o uso de arrays é fundamental em programação e uma base essencial na
 manipulação de dados. 
 Praticar regularmente é a chave para se tornar mais confiante!
 
+Nota: Para esses exercício usar necessario estudar arquivos:
+    arrays#2.js
+    arrays-matrizes.js
+
 * Crie uma função que receba dois arrays e os concatene em um único array.
 
 * Crie um array chamado numeros contendo números de 1 a 10. Utilize o método 
