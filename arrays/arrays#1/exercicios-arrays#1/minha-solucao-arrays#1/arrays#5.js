@@ -8,3 +8,14 @@
 
 ------------------------------------------------------------------------------------
 */
+const animais = [];
+
+animais.push("Gato");
+animais.push("Cachorro");
+animais.push("Lontra");
+console.log(animais);
+
+animais.shift()
+animais.shift()
+animais.shift()
+console.log(animais);

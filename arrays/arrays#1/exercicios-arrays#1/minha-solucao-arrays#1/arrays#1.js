@@ -7,3 +7,12 @@
 
 ------------------------------------------------------------------------------------
 */
+
+const elementos = [];
+elementos[1] = 2;
+elementos[3] = 4;
+elementos[7] = 8;
+
+console.log(elementos);
+console.log(`O tamanho do array elementos é ${elementos.length}`);
+
