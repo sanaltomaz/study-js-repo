@@ -6,3 +6,10 @@
 
 ------------------------------------------------------------------------------------
 */
+let numero = 2;
+
+const numeroPar = numero % 2 === 0
+    ? `O número ${numero} é par!` 
+    : `O número ${numero} é impar!`
+
+console.log(numeroPar);

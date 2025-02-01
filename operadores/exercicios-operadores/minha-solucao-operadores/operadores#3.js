@@ -7,3 +7,12 @@
 
 ------------------------------------------------------------------------------------
 */
+
+let log = true
+let admin = false
+
+const permissao = log
+    ? admin
+        ? console.log("Usuario logado com as devidas permissões.")
+        : console.log("Usuario logado com permissões limitadas.")
+    : console.log("Usuario não logado.");
