@@ -5,3 +5,9 @@
     
 ------------------------------------------------------------------------------------
 */
+
+const alunos = ['João', "Fernanda", "Larissa", "Rafael"];
+
+for (const nome of alunos) {
+    console.log(`Nome: ${nome}`);
+}

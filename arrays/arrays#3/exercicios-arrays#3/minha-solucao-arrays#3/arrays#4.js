@@ -6,3 +6,18 @@
 
 ------------------------------------------------------------------------------------
 */
+const numeros = [5, 10, 17, 2, 15]
+
+function maiorNumeroArray(array) {
+    let maiorNumero = 0
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element > maiorNumero) {
+            maiorNumero = element
+        }
+    }
+    console.log(`Maior número da Lista: ${maiorNumero}`);
+    
+}
+
+maiorNumeroArray(numeros)
