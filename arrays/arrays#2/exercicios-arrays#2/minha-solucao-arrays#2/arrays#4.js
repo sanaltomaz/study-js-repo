@@ -7,3 +7,10 @@
 
 ------------------------------------------------------------------------------------
 */
+
+const menuPrincipal = ['Paulista', 'Galinhada', 'Viradinha']
+const menuDeSobremesas = ['Sorvete', 'Mouse', 'Romeu e Julieta']
+
+const cardapio = menuPrincipal.concat(menuDeSobremesas)
+
+console.log(cardapio);
