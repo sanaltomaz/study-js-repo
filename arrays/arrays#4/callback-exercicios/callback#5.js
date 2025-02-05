@@ -11,3 +11,16 @@ const numeros = [6, 9, 12, 15, 18, 21];
 
 ------------------------------------------------------------------------------------
 */
+const numeros = [6, 9, 12, 15, 18, 21];
+
+const multiplicados = numeros.map(numero => numero * 3);
+
+const indiceDe18 = numeros.findIndex(numero => numero === 18);
+
+console.log("Array original: ", numeros);
+console.log("Array multiplicado: ", multiplicados);
+console.log("Índice do número 18: ", indiceDe18);
+
+// Não consegui usar o forEach() para realizar a operação,
+// Ele simplismente não retorna nada. [undefined]
+
