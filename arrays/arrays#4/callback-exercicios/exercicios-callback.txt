@@ -1,5 +1,6 @@
     Programação é prática! 
-Dominar o uso de arrays é fundamental em programação e uma base essencial na manipulação de dados. 
+Dominar o uso de arrays é fundamental em programação e 
+uma base essencial na manipulação de dados. 
 Praticar regularmente é a chave para se tornar mais confiante!
 
 * Utilize o método forEach para imprimir cada elemento 
