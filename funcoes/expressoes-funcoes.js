@@ -40,11 +40,16 @@ console.log(soma(5, 3));
 console.log(soma(10, 20)); 
 // Resultado: 30
 
-// EXPLICAÇÃO:
-// A função anônima recebe dois parâmetros (**a** e **b**) e retorna a soma deles.
-// Como a função está armazenada na constante **soma**, utilizamos esse nome para chamá-la.
+console.log(soma(100, 200));
+// Resultado: 300
 
 /* 
+EXPLICAÇÃO:
+1. A função anônima **soma** recebe dois parâmetros (**a** e **b**).
+2. Ela retorna a soma dos parâmetros.
+3. Para chamar a função, usamos o nome da constante **soma**.
+4. Você pode passar quaisquer valores como parâmetros ao chamar a função.
+
 ------------------------------------------------------------------------------------
 EXPRESSÕES DE FUNÇÃO NOMEADAS:
 Embora opcional, uma expressão de função pode ter um nome. 
@@ -60,4 +65,21 @@ const fatorial = function calcFatorial(n) {
 console.log(fatorial(5)); 
 // Resultado: 120
 
-// console.log
+console.log(fatorial(3)); 
+// Resultado: 6
+
+console.log(fatorial(7)); 
+// Resultado: 5040
+
+/* 
+EXPLICAÇÃO:
+1. A função anônima nomeada **calcFatorial** é atribuída à constante **fatorial**.
+2. **calcFatorial** é usada para calcular o fatorial de um número.
+3. Dentro da própria função, **calcFatorial** é usada para chamadas recursivas.
+4. Funções nomeadas ajudam na depuração e no entendimento do código, já que o nome da função aparece em stack traces.
+
+------------------------------------------------------------------------------------
+CONCLUSÃO:
+Expressões de função são uma maneira flexível e poderosa de definir funções em JavaScript.
+Podem ser anônimas ou nomeadas e são ideais para situações onde você deseja passar funções como valores ou criar funções no local onde serão usadas.
+*/
