@@ -1,104 +1,124 @@
 /* 
-OPERADOR TERNÁRIO
+------------------------------------------------------------------------------------
+# Operador Ternário em Node.js
 
 ------------------------------------------------------------------------------------
-O operador ternário é o único em JavaScript que utiliza **três operandos**:
-1. A condição, seguida do sinal **?**.
-2. O código a ser executado se a condição for **true**, seguido de **:**.
-3. O código a ser executado se a condição for **false**.
+## 1. Introdução
+O operador ternário é uma forma **concisa** de realizar uma **condicional simples** em uma única linha. 
+- Ele é composto por três partes: uma **condição**, um **resultado para verdadeiro** e um **resultado para falso**.
+- A sintaxe é: `condição ? valorSeVerdadeiro : valorSeFalso`.
 
-Esse operador é uma alternativa enxuta ao if/else, especialmente quando a lógica envolve
-apenas uma linha de retorno.
+Esse operador é ideal para substituir estruturas `if-else` simples, tornando o código mais compacto e legível.
 
-Observação: A regra de valores "truthy" e "falsy" em JavaScript também se aplica aqui!
 ------------------------------------------------------------------------------------
-EXEMPLO BÁSICO:
+## 2. Descrição do Funcionamento
+- **Definição básica**:  
+  O operador ternário avalia uma **condição** e retorna um valor dependendo se a condição é `true` ou `false`.
+
+- **Quando usar**:  
+  - Quando é necessário **tomar uma decisão simples** entre dois valores.
+  - Para **simplificar estruturas condicionais** que ocupariam várias linhas com `if-else`.
+
+- **Benefícios**:  
+  - Reduz a quantidade de código, tornando-o mais **legível** e **fácil de manter**.
+  - Útil em **atribuições condicionais** ou **retornos de funções** onde a lógica é simples.
+
+------------------------------------------------------------------------------------
+## 3. Exemplos Práticos
+
+### Exemplo 1: Atribuição Condicional com Múltiplas Condições
+------------------------------------------------------------------------------------
 */
-const valor = 50;
-const texto = valor < 50 ? "valor insuficiente" : "valor suficiente";
-console.log(texto); 
-// Resultado: "valor suficiente"
+const idade = 20;
+const temCarteira = true;
 
-// EXPLICAÇÃO:
-// condição ?   caso 'true'   :   caso 'false'
-valor < 50 ? "valor insuficiente" : "valor suficiente";
+// Verifica se a pessoa pode dirigir
+const podeDirigir = idade >= 18 && temCarteira
+    ? "Pode dirigir"
+    : idade >= 18
+    ? "Pode tirar carteira"
+    : "Não pode dirigir";
+
+console.log(podeDirigir); // Resultado esperado: "Pode dirigir"
 
 /* 
 ------------------------------------------------------------------------------------
-EXEMPLO DE UTILIZAÇÃO EM FUNÇÕES:
+### Exemplo 2: Retorno Condicional em Funções com Validação
+------------------------------------------------------------------------------------
 */
-let matriculaAtiva = true;
-
-// Usando if/else:
-function verificaMatriculaAtiva() {
-    if (matriculaAtiva === true) {
-        return "Matrícula ativa no sistema";
-    } else {
-        return "Matrícula não está ativa";
-    }
+function calcularDesconto(valorCompra, clientePremium) {
+    // Aplica desconto de 20% para clientes premium e 10% para compras acima de 100
+    return clientePremium
+        ? valorCompra * 0.8 // 20% de desconto
+        : valorCompra > 100
+        ? valorCompra * 0.9 // 10% de desconto
+        : valorCompra; // Sem desconto
 }
-console.log(verificaMatriculaAtiva()); 
-// Resultado: "Matrícula ativa no sistema"
 
-// Usando o operador ternário:
-function verificaMatriculaAtivaTernario() {
-    return matriculaAtiva 
-        ? "Matrícula ativa no sistema" 
-        : "Matrícula não está ativa";
-}
-console.log(verificaMatriculaAtivaTernario()); 
-// Resultado: "Matrícula ativa no sistema"
+console.log(calcularDesconto(150, true)); // Resultado esperado: 120 (20% de desconto)
+console.log(calcularDesconto(150, false)); // Resultado esperado: 135 (10% de desconto)
+console.log(calcularDesconto(80, false)); // Resultado esperado: 80 (sem desconto)
 
 /* 
-A principal diferença é que o operador ternário permite um único retorno na função, 
-tornando o código mais conciso.
 ------------------------------------------------------------------------------------
-EXEMPLO DE UTILIZAÇÃO EM VARIÁVEIS:
+### Exemplo 3: Uso com Operações Matemáticas e Strings
+------------------------------------------------------------------------------------
 */
-let idadeEstudante = 16;
+const numero = 7;
 
-// Usando if/else:
-let precisaDeAutorizacao;
-if (idadeEstudante < 18) {
-    precisaDeAutorizacao = true;
-} else {
-    precisaDeAutorizacao = false;
-}
-console.log(precisaDeAutorizacao); 
-// Resultado: true
+// Verifica se o número é positivo, negativo ou zero e retorna uma mensagem
+const mensagem = numero > 0
+    ? "O número é positivo"
+    : numero < 0
+    ? "O número é negativo"
+    : "O número é zero";
 
-// Usando operador ternário:
-const precisaAutorizacao = idadeEstudante < 18 ? true : false;
-console.log(precisaAutorizacao); 
-// Resultado: true
+console.log(mensagem); // Resultado esperado: "O número é positivo"
 
 /* 
-Nota: No último exemplo, o nome da variável foi ajustado para evitar conflitos no código.
 ------------------------------------------------------------------------------------
-DICAS IMPORTANTES:
-
-1. O operador ternário é ideal para simplificar condições simples em apenas uma linha.
-   Porém, **evite utilizá-lo para lógicas muito complexas**, pois pode dificultar a leitura.
-
-2. Caso o código fique muito longo ou confuso, considere usar um if/else tradicional 
-   para melhorar a clareza.
+### Exemplo 4: Operador Ternário Aninhado para Classificação
 ------------------------------------------------------------------------------------
-CURIOSIDADE EXTRA:
-
-- Você pode aninhar operadores ternários (usar um dentro do outro), mas isso deve ser feito 
-  com cautela para evitar confusões. Exemplo:
 */
 const nota = 85;
-const resultado = nota >= 90 
-    ? "Excelente" 
-    : nota >= 70 
-        ? "Aprovado" 
-        : "Reprovado";
 
-console.log(resultado); 
-// Resultado: "Aprovado"
+// Classifica a nota em A, B, C, D ou F
+const classificacao = nota >= 90
+    ? "A"
+    : nota >= 80
+    ? "B"
+    : nota >= 70
+    ? "C"
+    : nota >= 60
+    ? "D"
+    : "F";
+
+console.log(`Classificação: ${classificacao}`); // Resultado esperado: "Classificação: B"
 
 /* 
-Embora funcional, esse tipo de código pode ser difícil de ler e entender. 
-Analise caso a caso para escolher a melhor abordagem!
+------------------------------------------------------------------------------------
+### Exemplo 5: Uso em Funções de Setas (Arrow Functions)
+------------------------------------------------------------------------------------
+*/
+const saudacao = (hora) => {
+    return hora < 12
+        ? "Bom dia!"
+        : hora < 18
+        ? "Boa tarde!"
+        : "Boa noite!";
+};
+
+console.log(saudacao(14)); // Resultado esperado: "Boa tarde!"
+console.log(saudacao(9)); // Resultado esperado: "Bom dia!"
+console.log(saudacao(20)); // Resultado esperado: "Boa noite!"
+
+/* 
+------------------------------------------------------------------------------------
+## 4. Considerações Finais
+- O operador ternário é uma ferramenta poderosa para **simplificar decisões simples** em JavaScript.
+- Ele deve ser usado com cuidado em situações onde a lógica é **muito complexa**, pois pode comprometer a legibilidade do código.
+- É importante evitar o **aninhamento excessivo** de operadores ternários, pois isso pode tornar o código difícil de entender.
+- Em casos onde a clareza é mais importante que a concisão, prefira usar estruturas `if-else` tradicionais.
+
+------------------------------------------------------------------------------------
 */
