@@ -23,7 +23,7 @@ Ou seja, as referências não são copiadas, mas sim os próprios dados.
 ### Exemplo 1: Clonagem Profunda com JSON
 ------------------------------------------------------------------------------------
 */
-const arrayAninhado = [1, [2, 3], { chave: 'valor' }];
+const arrayAninhado = [1, [2, 3], { chave: 'valor', }];
 const copiaProfunda = JSON.parse(JSON.stringify(arrayAninhado));
 console.log(copiaProfunda);
 // Resultado: [1, [2, 3], { chave: 'valor' }]
