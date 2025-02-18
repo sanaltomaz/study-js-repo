@@ -1,3 +1,5 @@
+// Leitura de um aquivo simples usando `fs` e novos métodos do Node.js.
+
 const fs = require('fs');
 
 // Caminho do arquivo JSON

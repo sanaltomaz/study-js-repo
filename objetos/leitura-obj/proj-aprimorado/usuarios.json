@@ -1,0 +1,8 @@
+{
+    "usuario1": { "id": 1, "nome": "Alice", "idade": 25, "cidade": "São Paulo" },
+    "usuario2": { "id": 2, "nome": "Bruno", "idade": 30, "cidade": "Rio de Janeiro" },
+    "usuario3": { "id": 3, "nome": "Carla", "idade": 22, "cidade": "Belo Horizonte" },
+    "usuario4": { "id": 4, "nome": "Daniel", "idade": 28, "cidade": "Curitiba" },
+    "usuario5": { "id": 5, "nome": "Eduarda", "idade": 35, "cidade": "São Paulo" }
+}
+  
